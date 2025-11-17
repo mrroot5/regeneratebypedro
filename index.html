@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Servicios psicológicos profesionales - Reserva tu consulta hoy">
-    <title>Pedro - Psicólogo Clínico</title>
+    <meta name="description"
+        content="Servicios psicológicos profesionales experto en psicología positiva y mindfulness - Reserva tu consulta hoy">
+    <title>Pedro - Psicólogo General Sanitario Experto en psicología positiva y mindfulness</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/logo2.jpg">
     <style>
         * {
             margin: 0;
@@ -22,7 +24,7 @@
             --text: #333333;
             --text-light: #666666;
             --bg-light: #F9F6FC;
-            --white: #FFFFFF;
+            --white: #f7f7f7;
         }
 
         .container {
@@ -316,7 +318,9 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Pedro - Psicólogo</div>
+                <div class="logo"><img src="images/logo.jpg" style="width: 8rem; height: 8rem; border-radius: 1rem;" />
+                    <!-- <spam style="margin<-bottom: 100px;">Pedro - Psicólogo</spam> -->
+                </div>
                 <button class="mobile-menu-btn" onclick="toggleMenu()">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -341,7 +345,7 @@
                 <a href="#about" class="btn-secondary">Saber más</a>
             </div>
         </div>
-    </section> 
+    </section>
 
     <section id="about">
         <div class="container">
@@ -349,20 +353,23 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Apoyo Profesional en Salud Mental</h3>
-                    <p>Con años de experiencia en psicología clínica, ofrezco atención compasiva basada en evidencia
+                    <p>Con años de experiencia en psicología, ofrezco atención compasiva basada en evidencia
                         para ayudarte a superar los desafíos de la vida y lograr un cambio positivo duradero.</p>
                     <p>Mi enfoque combina técnicas terapéuticas comprobadas con un plan personalizado adaptado a tus
                         necesidades y objetivos.</p>
                     <div class="credentials">
-                        <span class="credential"><i class="fas fa-graduation-cap"></i> Psicólogo Clínico Titulado</span>
+                        <span class="credential"><i class="fas fa-graduation-cap"></i> Psicólogo General Sanitario
+                            Experto en psicología positiva y mindfulness</span>
                         <span class="credential"><i class="fas fa-certificate"></i> Terapeuta Certificado</span>
                         <span class="credential"><i class="fas fa-award"></i> Más de 10 Años de Experiencia</span>
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1718209881014-83732ea8376d?w=600&h=600&fit=crop"
-                        alt="Consultorio terapéutico profesional"
+                    <img src="images/perfil.jpg" alt="Consultorio terapéutico profesional"
                         style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                    <!-- <img src="https://images.unsplash.com/photo-1718209881014-83732ea8376d?w=600&h=600&fit=crop"
+                        alt="Consultorio terapéutico profesional"
+                        style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);"> -->
                 </div>
             </div>
         </div>
@@ -401,7 +408,7 @@
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-video"></i></div>
                     <h3>Sesiones en Línea</h3>
-                    <p>Terapia virtual conveniente desde la comodidad y privacidad de tu espacio.</p>
+                    <p>Terapia virtual desde la comodidad y privacidad de tu espacio.</p>
                 </div>
             </div>
         </div>
@@ -434,7 +441,7 @@
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>regeneratebypedro@example.com</p>
+                    <p>regeneratebypedro@gmail.com</p>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-clock"></i>
@@ -447,7 +454,10 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Pedro - Psicólogo Clínico. Todos los derechos reservados.</p>
+            <p>&copy; 2024 - <span id="current-year"></span></p>
+            <p style="margin-top: 0.5rem;">Pedro - Psicólogo General Sanitario Experto en psicología
+                positiva y mindfulness. Todos los
+                derechos reservados.</p>
             <p style="margin-top: 0.5rem; opacity: 0.8;">Servicios psicológicos profesionales | Titulado y Certificado
             </p>
         </div>
@@ -457,6 +467,13 @@
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
+        }
+
+        function setFooterYear() {
+            const d = new Date();
+            let year = d.getFullYear();
+
+            document.getElementById('#current-year').innerHTML = year;
         }
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -469,6 +486,8 @@
                 }
             });
         });
+
+        setFooterYear()
     </script>
 </body>
 
